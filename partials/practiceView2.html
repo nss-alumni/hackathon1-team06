@@ -1,17 +1,27 @@
 <div class="practiceView1" ng-controller="PracticeCtrl">
   <div class="instructions">
-
+    <h4>Var x = "Hello";</h4>
+    <h4>Var name = "<span>{{functionParameter}}</span>";</h4>
+    <h5>Create the function name "hiName" that returns "Hello" and your name!</h5>
   </div>
+
   <div class="functionParameter">
-    <textarea name="name" rows="8" cols="80" class="term userWriteArea" ng-model="functionParameter"></textarea>
+
+    <h5>Define your "name" parameter</h5>
+    <textarea name="name" rows="8" cols="80" class="term userWriteArea" ng-model="functionParameter" placeholder="Define your name parameter here..."></textarea>
   </div>
   <div class="funtionDefining">
-    <textarea name="name" rows="8" cols="80" class="term userWriteArea" ng-model="functionDef">
+    <h5>Create your function</h5>
+    <textarea name="name" rows="8" cols="80" class="term userWriteArea" ng-model="functionDef" placeholder="Define your function here...">
+
 
     </textarea>
   </div>
   <div class="functionCall">
-    <textarea name="name" rows="8" cols="80" class="term userWriteArea" ng-model="functionCall"></textarea>
+
+    <h5>Call your function</h5>
+    <textarea name="name" rows="8" cols="80" class="term userWriteArea" ng-model="functionCall" placeholder="Call your function here..."></textarea>
+
     <button type="button" name="button" ng-click="execute()">Run</button>
   </div>
   <div class="term functionResult" ng-model="functionResult">

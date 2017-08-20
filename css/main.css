@@ -27,3 +27,14 @@ h1 {
 .term button {
     color: black;
 }
+.bonnie {
+  height: 300px;
+}
+
+p, li {
+	font-size: 1.25em;
+}
+
+.bottomMargin {
+	margin-bottom: 20px;
+}

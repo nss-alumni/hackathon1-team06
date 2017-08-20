@@ -1,17 +1,43 @@
-<div>
-	<h1>How Does It Work?</h1>
-	<h3>A function is defined, then invoked (called) later in the code.</h3>
+<div class="parallax-container bonnie">
+    <div parallax><img src="../images/bonnie-tyler.jpg"></div>
 </div>
 
-<div>
-	<p>A function is defined:</p>
-	<p>function getChorus(){<br>return chorus;<br>}</p>
+<div class="blue-grey lighten-5">
+<div class="row">
+	<div class="col s8 offset-s3">
+		<h1 class="black-text">How Does It Work?</h1>
+	</div>
+	<div class="col s11 offset-s1">
+		<h4 class="light-blue-text text-darken-4">A function is defined, then invoked (called) later in the code.</h4>
+	</div>
 </div>
 
-<div>
-	<div>Lorem ipsum dolor sit amet, consectetuer adipiscing
-elit, sed diam nonummy nibh euismod tincidunt
-ut laoreet dolore magna aliquam erat volut</div>
-	<div>chorus populates here</div>
-	<button type="button">Get Chorus</button>
+<div class="row">
+	<div class="col s4 offset-s4">
+		<p>A function is defined:</p>
+		<p>function getChorus(){<br>return chorus;<br>}</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col s6 offset-s4">
+	  <ul>
+	    <li class="deep-orange-text" ng-show="show" ng-model="chorus">{{chorus}}<!-- (Turn around) --></li>
+	    <li>Every now and then I get a little bit lonely</li>
+	    <li>And you're never coming round</li>
+
+	    <li class="deep-orange-text" ng-show="show" ng-model="chorus">{{chorus}}<!-- (Turn around) --></li>
+	    <li>Every now and then I get a little bit tired</li>
+	    <li>Of listening to the sound of my tears</li>
+
+	    <li class="deep-orange-text" ng-show="show" ng-model="chorus">{{chorus}}<!-- (Turn around) --></li>
+	    <li>Every now and then I get a little bit nervous</li>
+	    <li>That the best of all the years have gone by</li>
+	  </ul>
+	  <div><!-- chorus populates here --></div>
+  </div>
+  <div class="col s4 offset-s4">
+		<a class="btn deep-orange waves-effect waves-light" ng-click="show = ! show">Get Chorus</a>
+	</div>
+</div>
 </div>
