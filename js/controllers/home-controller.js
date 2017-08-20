@@ -8,7 +8,7 @@ app.controller("HomeController", function($scope, $window) {
     }`
     };
 
-    $scope.chorus = "Turnaround bright eyes, every now and then I fall apart Turnaround bright eyes, every now and then I fall apart";
+    $scope.chorus = "Turnaround Every now and then";
 
 
 
@@ -26,5 +26,20 @@ app.controller("HomeController", function($scope, $window) {
 
 
     };
+
+     // $scope.myVar3 = true;
+     $scope.customCallbackFunc = () => {
+     	$scope.myVar3 = true;
+     	console.log("hellooooo");
+
+     }
+
+    // var options = [
+    // {selector: '#scrolltest', offset: 0, callback: function() {
+    //  $scope.customCallbackFunc();
+    //   } }
+    // ];
+    //  Materialize.scrollFire(options);
+        
 
 });

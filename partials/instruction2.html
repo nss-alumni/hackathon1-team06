@@ -23,21 +23,38 @@
 	<div class="col s6 offset-s4">
 	  <ul>
 	    <li class="deep-orange-text" ng-show="show" ng-model="chorus">{{chorus}}<!-- (Turn around) --></li>
-	    <li>Every now and then I get a little bit lonely</li>
-	    <li>And you're never coming round</li>
+
+	    <li>I get a little bit angry</li>
+			<li>And I know I've got to get out and cry</li>
 
 	    <li class="deep-orange-text" ng-show="show" ng-model="chorus">{{chorus}}<!-- (Turn around) --></li>
-	    <li>Every now and then I get a little bit tired</li>
-	    <li>Of listening to the sound of my tears</li>
+	    <li>I get a little bit terrified</li>
+			<li>But then I see the look in your eyes</li>
 
-	    <li class="deep-orange-text" ng-show="show" ng-model="chorus">{{chorus}}<!-- (Turn around) --></li>
-	    <li>Every now and then I get a little bit nervous</li>
-	    <li>That the best of all the years have gone by</li>
+
 	  </ul>
 	  <div><!-- chorus populates here --></div>
   </div>
-  <div class="col s4 offset-s4">
-		<a class="btn deep-orange waves-effect waves-light" ng-click="show = ! show">Get Chorus</a>
+  <div class="col s4 offset-s4 ">
+		<a class="btn deep-orange waves-effect waves-light" ng-click="show = ! show; myVar2 = ! myVar2;">Get Chorus</a>
 	</div>
+
 </div>
+
 </div>
+
+    <ul ng-if="myVar2" class="collapsible" data-collapsible="accordion">
+    
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>The Code</div>
+      <div class="collapsible-body"><span>
+
+      <blockquote>Im a div put code here</blockquote>  
+
+      </span>
+      </div>
+    </li>
+
+  </ul>
+</div>
+

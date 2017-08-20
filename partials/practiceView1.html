@@ -5,7 +5,7 @@
 <div class="container">
 <div class="practiceView1" ng-controller="PracticeCtrl">
   <div class="instructions">
-    <h4>Var x = "Hello";</h4>
+    <h4>var x = "Hello";</h4>
     <h5>Create the function "sayHi" that returns "Hello"!</h5>
   </div>
   <div class="funtionDefining">
@@ -18,9 +18,12 @@
 
     <textarea name="name" rows="8" cols="80" class="term userWriteArea" ng-model="functionCall" placeholder="Call your function here..."></textarea>
 
-    <a class="btn waves-effect waves-light btn-large btn-floating pulse deep-orange" ng-click="execute()">Run</a>
+  <a class="btn btn-large waves-effect waves-light btn-floating pulse deep-orange" ng-click="execute()">Run</a>
+    <a class="btn btn-large waves-effect waves-light btn-floating pulse deep-orange" ng-click="reset()">Reset</a>
   </div>
+
   <div class="term functionResult" ng-model="functionResult">
+
     {{functionResult}}
   </div>
 </div>
