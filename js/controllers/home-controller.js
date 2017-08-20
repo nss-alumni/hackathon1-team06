@@ -9,4 +9,6 @@ app.controller("HomeController", function($scope, $window) {
     }`
   };
 
+  $scope.chorus = "Turnaround";
+
 });

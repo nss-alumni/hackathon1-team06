@@ -9,9 +9,23 @@
 </div>
 
 <div>
-	<div>Lorem ipsum dolor sit amet, consectetuer adipiscing
-elit, sed diam nonummy nibh euismod tincidunt
-ut laoreet dolore magna aliquam erat volut</div>
-	<div>chorus populates here</div>
-	<button type="button">Get Chorus</button>
+	<div>
+    <ul>
+    <li class="indigo-text" ng-show="show" ng-model="chorus">{{chorus}}<!-- (Turn around) --></li>
+    <li>Every now and then</li>
+    <li>I get a little bit lonely</li>
+    <li>And you're never coming round</li><P>
+
+    <li class="indigo-text" ng-show="show" ng-model="chorus">{{chorus}}<!-- (Turn around) --></li>
+    <li>Every now and then</li>
+    <li>I get a little bit tired</li>
+    <li>Of listening to the sound of my tears</li><P>
+
+    <li class="indigo-text" ng-show="show" ng-model="chorus">{{chorus}}<!-- (Turn around) --></li>
+    <li>Every now and then</li>
+    <li>I get a little bit nervous</li>
+    <li>That the best of all the years have gone by</li><P>
+  </ul>
+  </div><!-- chorus populates here --></div>
+	<button type="button" ng-click="show = ! show">Get Chorus</button>
 </div>
