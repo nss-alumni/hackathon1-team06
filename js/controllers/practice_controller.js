@@ -20,7 +20,7 @@ app.controller('PracticeCtrl', function($scope, $window){
     let parseFunction = (string) => {
         checkFunctionSpell(string)
         extractFunctionName(string);
-
+        getReturn(string);
     }
 
     let extractFunctionName = (string) => {
@@ -45,5 +45,18 @@ app.controller('PracticeCtrl', function($scope, $window){
     //     f.indexOf('(');
     //     f.indexOf('{');
     //     f.indexOf('}');
+
+    let getReturn = (string) => {
+      let stringArray = string.split('');
+      let firstCurly = stringArray.indexOf('{');
+      let lastCurly = stringArray.indexOf('}');
+      let returnStatementWithReturns = stringArray.slice(firstCurly + 1, lastCurly);
+      returnStatementWithReturns = returnStatementWithReturns.join('');
+      let returnStringIndex = returnStatementWithReturns.indexOf('return');
+      let semiStringIndex = returnStatementWithReturns.indexOf(';');
+      let returnStatement = returnStatementWithReturns.slice(returnStringIndex, semiStringIndex + 1);
+      return returnStatement;
+    }
+
 
 });
