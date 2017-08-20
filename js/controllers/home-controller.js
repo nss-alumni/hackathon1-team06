@@ -9,6 +9,4 @@ app.controller("HomeController", function($scope, $window) {
     }`
   };
 
-
-
 });
