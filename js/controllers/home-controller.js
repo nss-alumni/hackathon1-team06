@@ -27,4 +27,19 @@ app.controller("HomeController", function($scope, $window) {
 
     };
 
+     // $scope.myVar3 = true;
+     $scope.customCallbackFunc = () => {
+     	$scope.myVar3 = true;
+     	console.log("hellooooo");
+
+     }
+
+    // var options = [
+    // {selector: '#scrolltest', offset: 0, callback: function() {
+    //  $scope.customCallbackFunc();
+    //   } }
+    // ];
+    //  Materialize.scrollFire(options);
+        
+
 });
