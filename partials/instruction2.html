@@ -10,8 +10,8 @@
 
 <div>
 	<div>Lorem ipsum dolor sit amet, consectetuer adipiscing
-elit, sed diam nonummy nibh euismod tincidunt
-ut laoreet dolore magna aliquam erat volut</div>
-	<div>chorus populates here</div>
-	<button type="button">Get Chorus</button>
+       elit, sed diam nonummy nibh euismod tincidunt
+       ut laoreet dolore magna aliquam erat volut</div>
+	<div ng-show="show" ng-model="chorus">{{chorus}}<!-- chorus populates here --></div>
+	<button type="button" ng-click="show = ! show">Get Chorus</button>
 </div>
