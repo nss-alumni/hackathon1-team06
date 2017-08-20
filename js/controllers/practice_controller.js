@@ -1,6 +1,7 @@
 'use strict';
 
 var variable;
+var dynamicVar;
 
 app.controller('PracticeCtrl', function($scope, $window){
     console.log('Practice!');
@@ -69,6 +70,7 @@ app.controller('PracticeCtrl', function($scope, $window){
       } else {
         withReturns = withReturns.join('');
         let returnStatement = withReturns.slice(withReturns.indexOf('return'), withReturns.indexOf(';') + 1);
+        console.log(returnStatement);
         userReturn = returnStatement;
         checkFunctionCall();
       }
@@ -81,10 +83,12 @@ app.controller('PracticeCtrl', function($scope, $window){
         } else {
             console.log("TOOLTIP: You have called the function incorrectly.");
         }
+        dynamicVar = 'this';
+        console.log(window.dynamicVar)
     };
 
     let runUserFunction = () => {
-        variable = 'hello';
+        variable = dynamicVar;
         let definition = new Function(userReturn);
         $scope.functionResult = definition();
     };
