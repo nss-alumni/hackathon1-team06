@@ -1,6 +1,6 @@
 'use strict';
 
-var variable;
+var x;
 var name;
 
 app.controller('PracticeCtrl', function($scope, $window){
@@ -89,13 +89,13 @@ app.controller('PracticeCtrl', function($scope, $window){
     };
 
     let runUserFunction = () => {
-        variable = $scope.functionVariable;
+        x = $scope.functionVariable;
         let definition = new Function(userReturn);
         $scope.functionResult = definition();
     };
 
     let runUserFunctionWithParams = () => {
-        variable = $scope.functionVariable;
+        x = $scope.functionVariable;
         name = $scope.functionParameter;
         let definition = new Function(name, userReturn);
         $scope.functionResult = definition();
