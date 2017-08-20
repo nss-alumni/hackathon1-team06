@@ -8,7 +8,7 @@ app.controller("HomeController", function($scope, $window) {
     }`
     };
 
-    $scope.chorus = "Turnaround bright eyes, every now and then I fall apart Turnaround bright eyes, every now and then I fall apart";
+    $scope.chorus = "Turnaround Every now and then";
 
 
 
