@@ -10,3 +10,10 @@ h1 {
 	font-family: roboto, arial, sans-serif;
 }
 
+.bonnie {
+  height: 300px;
+}
+
+p, li {
+	font-size: 1.25em;
+}
