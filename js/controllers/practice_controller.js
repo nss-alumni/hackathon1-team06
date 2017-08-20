@@ -1,6 +1,7 @@
 'use strict';
 
 var variable;
+var name;
 
 app.controller('PracticeCtrl', function($scope, $window){
     console.log('Practice!');
@@ -8,6 +9,8 @@ app.controller('PracticeCtrl', function($scope, $window){
     $scope.functionDef = '';
     $scope.functionCall = '';
     $scope.functionResult = '';
+    $scope.functionVariable = 'Hello ';
+    $scope.functionParameter = '';
     let functionName = '';
     let userReturn = '';
 
@@ -42,7 +45,7 @@ app.controller('PracticeCtrl', function($scope, $window){
     };
 
     let checkParentheses = (string) => {
-        if (string.includes('()') || string.includes('( )')) {
+        if (string.includes('()') || string.includes('( )') || string.includes('(name)') || string.includes('( name )')) {
             checkCurlies(string);
         } else {
             console.log('TOOLTIP: You have not formatted your function definition correctly. Please check your ()');
@@ -76,16 +79,25 @@ app.controller('PracticeCtrl', function($scope, $window){
     };
 
     let checkFunctionCall = () => {
-        if ($scope.functionCall === `${functionName}()`){
+        if ($scope.functionCall === `${functionName}();`){
             runUserFunction();
+        } else if ($scope.functionCall === `${functionName}(name);`){
+            runUserFunctionWithParams();
         } else {
             console.log("TOOLTIP: You have called the function incorrectly.");
         }
     };
 
     let runUserFunction = () => {
-        variable = 'hello';
+        variable = $scope.functionVariable;
         let definition = new Function(userReturn);
+        $scope.functionResult = definition();
+    };
+
+    let runUserFunctionWithParams = () => {
+        variable = $scope.functionVariable;
+        name = $scope.functionParameter;
+        let definition = new Function(name, userReturn);
         $scope.functionResult = definition();
     };
 
