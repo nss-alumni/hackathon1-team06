@@ -1,25 +1,38 @@
-<div>
-    <h1>What are parameters?</h1>
-    <h4>Function parameters are the names listed in the function definition</h4>
+<div class="parallax-container bonnie">
+    <div parallax><img src="../images/path-totality.jpg"></div>
+</div>
+<div class="blue-grey lighten-5">
+	<div class="row">
+		<div class="col s9 offset-s3">
+			<h1>What are parameters?</h1>
+		</div>
+		<div class="col s12">
+			<h4 class="light-blue-text text-darken-4">Function parameters are the names listed in the function definition</h4>
+		</div>
+		<div class="col s4 offset-s4 white bottomMargin">
+      
     <blockquote><p>function changeLyrics(<b>someThing</b>) = {
         <br>&nbsp;&nbsp;&nbsp;&nbsp;return lyric + <b>someThing</b>;
         <br>&nbsp;&nbsp;&nbsp;&nbsp;}</p></blockquote>
 </div>
+    <h6 class="col s7" ng-model="parameter1">Turnaround, every now and then I get a little bit <b>{{version1}}</b><br>And you're never coming round</h6>
+    <input class="col s3" type="text" placeholder="lonely" ng-model="parameter1" />
+    <button class="col s2 waves-effect waves-light btn" type="button" ng-click="changeLyric(parameter1, 1)">Change Lyric</button>
 
-<h6 class="col s7" ng-model="parameter1">Turnaround, every now and then I get a little bit <b>{{version1}}</b><br>And you're never coming round</h6>
-<input class="col s3" type="text" placeholder="lonely" ng-model="parameter1" />
-<button class="col s2 waves-effect waves-light btn" type="button" ng-click="changeLyric(parameter1, 1)">Change Lyric</button>
+    <h6 class="col s7" ng-model="parameter2">Turnaround, every now and then I get a little bit <b>{{version2}}</b><br>Of listening to the sound of my tears</h6>
+    <input class="col s3" type="text" placeholder="tired" ng-model="parameter2" />
+    <button class="col s2 waves-effect waves-light btn" type="button" ng-click="changeLyric(parameter2, 2)">Change Lyric</button>
 
-<h6 class="col s7" ng-model="parameter2">Turnaround, every now and then I get a little bit <b>{{version2}}</b><br>Of listening to the sound of my tears</h6>
-<input class="col s3" type="text" placeholder="tired" ng-model="parameter2" />
-<button class="col s2 waves-effect waves-light btn" type="button" ng-click="changeLyric(parameter2, 2)">Change Lyric</button>
+    <h6 class="col s7" ng-model="parameter3">Turnaround, every now and then I get a little bit <b>{{version3}}</b><br>That the best of all the years have gone by</h6>
+    <input class="col s3" type="text" placeholder="terrified" ng-model="parameter3" />
+    <button class="col s2 waves-effect waves-light btn" type="button" ng-click="changeLyric(parameter3, 3)">Change Lyric</button>
 
-<h6 class="col s7" ng-model="parameter3">Turnaround, every now and then I get a little bit <b>{{version3}}</b><br>That the best of all the years have gone by</h6>
-<input class="col s3" type="text" placeholder="terrified" ng-model="parameter3" />
-<button class="col s2 waves-effect waves-light btn" type="button" ng-click="changeLyric(parameter3, 3)">Change Lyric</button>
+    <h6 class="col s7" ng-model="parameter4">Turnaround, every now and then I get a little bit <b>{{version4}}</b><br>And then I see the look in your eyes<br>
+    Turnaround bright eyes, but every now and then I fall apart<br>
+    Turnaround bright eyes, every now and then I fall apart</h6>
+    <input class="col s3" type="text" placeholder="scared" ng-model="parameter4" />
+    <button class="col s2 waves-effect waves-light btn" type="button" ng-click="changeLyric(parameter4, 4)">Change Lyric</button>
+    </div>
+	</div>
+</div>
 
-<h6 class="col s7" ng-model="parameter4">Turnaround, every now and then I get a little bit <b>{{version4}}</b><br>And then I see the look in your eyes<br>
-Turnaround bright eyes, but every now and then I fall apart<br>
-Turnaround bright eyes, every now and then I fall apart</h6>
-<input class="col s3" type="text" placeholder="scared" ng-model="parameter4" />
-<button class="col s2 waves-effect waves-light btn" type="button" ng-click="changeLyric(parameter4, 4)">Change Lyric</button>

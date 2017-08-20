@@ -13,15 +13,6 @@ app.controller("HomeController", function($scope, $window) {
 
 
     $scope.changeLyric = (parameterz, number) => {
-        // 	$scope.singsong = "(que 80s pop ballad intro)";
-        // $scope.parameters = ["lonely", "tired", "terrified", "scared"]; 
-        //  	$scope.parameters.push(parameterz);
-        //  	let lyric = " Turnaround, every now and then I get a little bit ";
-
-        //  	for (var i = 0; i < $scope.parameters.length; i++)
-        //   	{
-        //   		$scope.singsong += `${lyric} ${$scope.parameters[i]}`;
-        //   	}
 
         if (number === 1) {
             $scope.version1 = parameterz;
@@ -35,6 +26,5 @@ app.controller("HomeController", function($scope, $window) {
 
 
     };
-
 
 });

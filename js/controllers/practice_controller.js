@@ -1,50 +1,64 @@
 'use strict';
 
+var variable;
+var name;
+
 app.controller('PracticeCtrl', function($scope, $window){
     console.log('Practice!');
 
     $scope.functionDef = '';
     $scope.functionCall = '';
     $scope.functionResult = '';
-    let fArray = '';
+    $scope.functionVariable = 'Hello ';
+    $scope.functionParameter = '';
+    let functionName = '';
+    let userReturn = '';
 
     $scope.execute = () => {
-        console.log($scope.functionDef);
         buildFunction();
     };
 
     let buildFunction = () => {
-        let userFunction = new Function(parseFunction($scope.functionDef));
+        parseFunction($scope.functionDef);
     };
 
     let parseFunction = (string) => {
         checkFunctionSpell(string);
-        extractFunctionName(string);
-        getReturn(string);
     };
 
     let extractFunctionName = (string) => {
         let f = string;
-        fArray = f.split('');
+        let fArray = f.split('');
         let fName = fArray.slice(9, fArray.indexOf('('));
         let fCall = fName.join('').trimRight();
-        console.log(fCall);
-        return fCall;
+        functionName = fCall;
+        checkParentheses(string);
     };
 
     let checkFunctionSpell = (string) => {
         let f = string.slice(0, 8);
-        console.log(f);
         if (f === 'function'){
-            return;
+            extractFunctionName(string);
         } else {
-            console.log('You have spelled function incorrectly');
+            console.log('TOOLTIP: You have spelled function incorrectly');
         }
     };
 
-    //     f.indexOf('(');
-    //     f.indexOf('{');
-    //     f.indexOf('}');
+    let checkParentheses = (string) => {
+        if (string.includes('()') || string.includes('( )') || string.includes('(name)') || string.includes('( name )')) {
+            checkCurlies(string);
+        } else {
+            console.log('TOOLTIP: You have not formatted your function definition correctly. Please check your ()');
+        }
+    };
+
+    let checkCurlies = (string) => {
+        if (string.includes('{') && string.includes('}')) {
+            getReturn(string);
+        } else {
+            console.log('You are missing an opening or closing curly brace.');
+        }
+    };
 
     let getReturn = (string) => {
 
@@ -52,16 +66,39 @@ app.controller('PracticeCtrl', function($scope, $window){
 
       let withReturns = stringArray.slice(stringArray.indexOf('{') + 1, stringArray.indexOf('}'));
       withReturns.splice(withReturns.indexOf("\n"), 1);
-    
+
       if (withReturns[(withReturns.indexOf("\n"))-1] !== ";") {
         console.log("TOOL TIP: Don't forget your ';' at the end of your return statement!");
       } else {
         withReturns = withReturns.join('');
         let returnStatement = withReturns.slice(withReturns.indexOf('return'), withReturns.indexOf(';') + 1);
-        return returnStatement;
+        userReturn = returnStatement;
+        checkFunctionCall();
       }
 
     };
 
+    let checkFunctionCall = () => {
+        if ($scope.functionCall === `${functionName}();`){
+            runUserFunction();
+        } else if ($scope.functionCall === `${functionName}(name);`){
+            runUserFunctionWithParams();
+        } else {
+            console.log("TOOLTIP: You have called the function incorrectly.");
+        }
+    };
+
+    let runUserFunction = () => {
+        variable = $scope.functionVariable;
+        let definition = new Function(userReturn);
+        $scope.functionResult = definition();
+    };
+
+    let runUserFunctionWithParams = () => {
+        variable = $scope.functionVariable;
+        name = $scope.functionParameter;
+        let definition = new Function(name, userReturn);
+        $scope.functionResult = definition();
+    };
 
 });
