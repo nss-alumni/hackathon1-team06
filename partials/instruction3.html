@@ -1,8 +1,20 @@
-<div>
-	<h1>What are parameters?</h1>
-	<h4>Function parameters are the names listed in the function definition</h4>
-	<p>function changeLyrics(a){<br>return verse + a<br>}</p>
+<div class="parallax-container bonnie">
+    <div parallax><img src="../images/path-totality.jpg"></div>
 </div>
-<input type="text" placeholder="lonely" ng-model="parameter"/>
-<button type="button" ng-click="show = ! show">Change Lyrics</button>
-<h6>Turnaround, every now and then I get a little bit <em ng-show="show">{{parameter}}</em></h6>
+
+<div class="blue-grey lighten-5">
+	<div class="row">
+		<div class="col s9 offset-s3">
+			<h1>What are parameters?</h1>
+		</div>
+		<div class="col s12">
+			<h4 class="light-blue-text text-darken-4">Function parameters are the names listed in the function definition</h4>
+		</div>
+		<div class="col s4 offset-s4 white bottomMargin">
+			<p>function changeLyrics(a){<br>return verse + a<br>}</p>
+			<input type="text" placeholder="lonely" ng-model="parameter"/>
+			<button type="button" ng-click="show = ! show">Change Lyrics</button>
+			<h6>Turnaround, every now and then I get a little bit <em ng-show="show">{{parameter}}</em></h6>
+		</div>
+	</div>
+</div>

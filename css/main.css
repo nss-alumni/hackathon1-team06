@@ -17,3 +17,7 @@ h1 {
 p, li {
 	font-size: 1.25em;
 }
+
+.bottomMargin {
+	margin-bottom: 20px;
+}
