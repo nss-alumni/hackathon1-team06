@@ -79,9 +79,9 @@ app.controller('PracticeCtrl', function($scope, $window){
     };
 
     let checkFunctionCall = () => {
-        if ($scope.functionCall === `${functionName}()`){
+        if ($scope.functionCall === `${functionName}();`){
             runUserFunction();
-        } else if ($scope.functionCall === `${functionName}(name)`){
+        } else if ($scope.functionCall === `${functionName}(name);`){
             runUserFunctionWithParams();
         } else {
             console.log("TOOLTIP: You have called the function incorrectly.");
