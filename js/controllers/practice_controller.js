@@ -9,6 +9,6 @@ app.controller('PracticeCtrl', function($scope, $window){
 
     $scope.execute = () => {
         console.log($scope.functionDef);
-    }
+    };
 
 });
