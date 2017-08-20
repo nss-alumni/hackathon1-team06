@@ -19,6 +19,14 @@ app.controller('PracticeCtrl', function($scope, $window){
     };
     
 
+    $scope.reset = () => {
+        $scope.functionDef = '';
+        $scope.functionCall = '';
+        $scope.functionResult = '';
+        $scope.functionVariable = 'Hello ';
+        $scope.functionParameter = '';
+    };
+
     let buildFunction = () => {
         parseFunction($scope.functionDef);
     };
