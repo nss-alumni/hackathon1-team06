@@ -10,6 +10,23 @@ h1 {
 	font-family: roboto, arial, sans-serif;
 }
 
+.term {
+    background: black;
+    color: #33ff66;
+    height: 160px;
+    width: 60%;
+    margin: 10px;
+    border: 9px, solid, #dddddd;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: white;
+    padding: 8px;
+    font-family: consolas;
+    font-size: 1.3em;
+}
+
+.term button {
+    color: black;
+}
 .bonnie {
   height: 300px;
 }

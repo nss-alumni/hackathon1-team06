@@ -4,16 +4,18 @@
     <h5>Create the function "sayHi" that returns "Hello"!</h5>
   </div>
   <div class="funtionDefining">
-    <textarea name="name" rows="8" cols="80" class="userWriteArea" ng-model="functionDef" placeholder="Define your function here...">
 
+    <textarea name="name" rows="8" cols="80" class="term userWriteArea" ng-model="functionDef" placeholder="Define your function here...">
     </textarea>
   </div>
   <h5>Call the function you just created!</h5>
   <div class="functionCall">
-    <textarea name="name" rows="8" cols="80" class="userWriteArea" ng-model="functionCall" placeholder="Call your function here..."></textarea>
+
+    <textarea name="name" rows="8" cols="80" class="term userWriteArea" ng-model="functionCall" placeholder="Call your function here..."></textarea>
+
     <button type="button" name="button" ng-click="execute()">Run</button>
   </div>
-  <div class="functionResult" ng-model="functionResult">
+  <div class="term functionResult" ng-model="functionResult">
     {{functionResult}}
   </div>
 </div>

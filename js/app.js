@@ -9,9 +9,5 @@ app.config( ($routeProvider) => {
     templateUrl: 'partials/home.html',
     controller: 'HomeController'
     })
-    // .when('/practice1', {
-    //     templateUrl: 'partials/practiceView1.html',
-    //     controller: 'PracticeCtrl'
-    // })
   .otherwise('/');
 });
