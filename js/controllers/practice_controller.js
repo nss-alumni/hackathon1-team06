@@ -6,9 +6,44 @@ app.controller('PracticeCtrl', function($scope, $window){
     $scope.functionDef = '';
     $scope.functionCall = '';
     $scope.functionResult = '';
+    let fArray = '';
 
     $scope.execute = () => {
         console.log($scope.functionDef);
+        buildFunction();
     };
+
+    let buildFunction = () => {
+        let userFunction = new Function(parseFunction($scope.functionDef));
+    }
+
+    let parseFunction = (string) => {
+        checkFunctionSpell(string)
+        extractFunctionName(string);
+
+    }
+
+    let extractFunctionName = (string) => {
+        let f = string;
+        fArray = f.split('');
+        let fName = fArray.slice(9, fArray.indexOf('('));
+        let fCall = fName.join('').trimRight();
+        console.log(fCall);
+        return fCall;
+    }
+
+    let checkFunctionSpell = (string) => {
+        let f = string.slice(0, 8);
+        console.log(f);
+        if (f === 'function'){
+            return;
+        } else {
+            console.log('You have spelled function incorrectly');
+        }
+    }
+
+    //     f.indexOf('(');
+    //     f.indexOf('{');
+    //     f.indexOf('}');
 
 });
