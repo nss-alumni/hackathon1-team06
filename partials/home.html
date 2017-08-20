@@ -4,20 +4,22 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col s12 offset-s2">
-			<h1>What is a function?</h1>
+		<div class="col s10 offset-s2">
+			<h1>What Is a Function?</h1>
 		</div>
 	</div>
 	<div class="row">
     <div ng-include="'../partials/instruction1.html'"></div>
-	<div class="col s12">
-		<p>A function is a block of JavaScript that robotically does the same thing when you call its name. See example below:</p>
+  </div>
+  <div class="row">
+		<div class="col s12">
+			<p>A function is a block of JavaScript that robotically does the same thing when you call its name. See example below:</p>
+		</div>
 	</div>
 	<div class="row">
 		<div class="col s12">
 		<div input-field>
-	    <textarea ng-model="example.function" class="materialize-textarea"></textarea>
-	    <label>Example</label>
+	    <textarea ng-model="example.function" class="materialize-textarea black-text" readonly="readonly"></textarea>
 		</div>
 		</div>
 	</div>
@@ -28,12 +30,14 @@
 	</div>
 	<div class="row">
 		<div class="col s12">
-			<a ng-click="eclipse = ! eclipse" class="btn waves-effect waves-light orange">
+			<a ng-click="eclipse = ! eclipse" class="btn waves-effect waves-light deep-orange">
 			Get Song
 			</a>
 		</div>
-
 	</div>
+</div>
+
+
 
 <div ng-include="'../partials/instruction1.html'"></div>
 <div ng-include="'../partials/instruction2.html'"></div>
@@ -41,4 +45,3 @@
 <div ng-include="'../partials/practiceView1.html'"></div>
 <div ng-include="'../partials/practiceView2.html'"></div>
 
-</div>
