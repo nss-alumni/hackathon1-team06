@@ -36,5 +36,6 @@ p, li {
 }
 
 .bottomMargin {
-	margin-bottom: 20px;
+	margin-bottom: 0px;
+	padding-bottom: 30px;
 }

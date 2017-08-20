@@ -1,3 +1,4 @@
+<div class="container">
 <div class="practiceView1" ng-controller="PracticeCtrl">
   <div class="instructions">
     <h4>var x = "Hello";</h4>
@@ -22,10 +23,12 @@
     <h5>Call your function</h5>
     <textarea name="name" rows="8" cols="80" class="term userWriteArea" ng-model="functionCall" placeholder="Call your function here..."></textarea>
 
-    <button type="button" name="button" ng-click="execute()">Run</button>
-    <button type="button" name="reset" ng-click="reset()">Reset</button>
+
+    <a class="btn btn-large waves-effect waves-light btn-floating pulse deep-orange" ng-click="execute()">Run</a>
+    <a class="btn btn-large waves-effect waves-light btn-floating pulse deep-orange" ng-click="reset()">Reset</a>
   </div>
   <div class="term functionResult" ng-model="functionResult">
     {{functionResult}}
   </div>
+</div>
 </div>
