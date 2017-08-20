@@ -84,7 +84,7 @@ app.controller('PracticeCtrl', function($scope, $window){
     };
 
     let runUserFunction = () => {
-        variable = 'hello';
+        variable = "variable";
         let definition = new Function(userReturn);
         $scope.functionResult = definition();
     };
