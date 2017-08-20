@@ -7,9 +7,9 @@
 	<p>A function is defined:</p>
 	<p>function getChorus(){<br>return chorus;<br>}</p>
 </div>
-
+        
 <div>
-	<div>
+    <div>
     <ul>
     <li class="indigo-text" ng-show="show" ng-model="chorus">{{chorus}}<!-- (Turn around) --></li>
     <li>Every now and then</li>
@@ -27,5 +27,19 @@
     <li>That the best of all the years have gone by</li><P>
   </ul>
   </div><!-- chorus populates here --></div>
-	<button type="button" ng-click="show = ! show">Get Chorus</button>
+    <button type="button" ng-click="show = ! show; myVar2 = ! myVar2;" >Get Chorus</button>
+    
+    <ul ng-if="myVar2" class="collapsible" data-collapsible="accordion">
+    
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>The Code</div>
+      <div class="collapsible-body"><span>
+
+        Im a div put code here
+
+      </span>
+      </div>
+    </li>
+
+  </ul>
 </div>

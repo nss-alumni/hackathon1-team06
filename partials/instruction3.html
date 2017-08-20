@@ -4,5 +4,16 @@
 	<p>function changeLyrics(a){<br>return verse + a<br>}</p>
 </div>
 <input type="text" placeholder="lonely" ng-model="parameter"/>
-<button type="button" ng-click="show = ! show">Change Lyrics</button>
+<button type="button" ng-click="show = ! show; myVar3 = ! myVar3;">Change Lyrics</button>
+<ul ng-if="myVar3" class="collapsible" data-collapsible="accordion">
+    
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>The Code</div>
+      <div class="collapsible-body"><span>
+
+        Im a div put code here
+
+      </span>
+      </div>
+    </li>
 <h6>Turnaround, every now and then I get a little bit <em ng-show="show">{{parameter}}</em></h6>
