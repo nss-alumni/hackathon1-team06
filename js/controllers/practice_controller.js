@@ -7,40 +7,44 @@ app.controller('PracticeCtrl', function($scope, $window){
     $scope.functionCall = '';
     $scope.functionResult = '';
     let fArray = '';
+    let fCall = '';
 
     $scope.execute = () => {
-        console.log($scope.functionDef);
         buildFunction();
     };
 
     let buildFunction = () => {
         let userFunction = new Function(parseFunction($scope.functionDef));
-    }
+    };
 
     let parseFunction = (string) => {
-        checkFunctionSpell(string)
-        extractFunctionName(string);
-
-    }
+        checkFunctionSpell(string);
+    };
 
     let extractFunctionName = (string) => {
         let f = string;
         fArray = f.split('');
         let fName = fArray.slice(9, fArray.indexOf('('));
         let fCall = fName.join('').trimRight();
-        console.log(fCall);
-        return fCall;
-    }
+        checkParentheses(string);
+    };
 
     let checkFunctionSpell = (string) => {
         let f = string.slice(0, 8);
-        console.log(f);
         if (f === 'function'){
-            return;
+            extractFunctionName(string);
         } else {
-            console.log('You have spelled function incorrectly');
+            console.log('TOOLTIP: You have spelled function incorrectly');
         }
-    }
+    };
+
+    let checkParentheses = (string) => {
+        if (string.includes('()') || string.includes('( )')) {
+            console.log("RUN THE NEXT CHECK");
+        } else {
+            console.log('TOOLTIP: You have not formatted your function definition correctly. Please check your ()');
+        }
+    };
 
     //     f.indexOf('(');
     //     f.indexOf('{');
