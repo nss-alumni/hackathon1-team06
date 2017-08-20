@@ -15,13 +15,13 @@ app.controller('PracticeCtrl', function($scope, $window){
 
     let buildFunction = () => {
         let userFunction = new Function(parseFunction($scope.functionDef));
-    }
+    };
 
     let parseFunction = (string) => {
-        checkFunctionSpell(string)
+        checkFunctionSpell(string);
         extractFunctionName(string);
         getReturn(string);
-    }
+    };
 
     let extractFunctionName = (string) => {
         let f = string;
@@ -30,7 +30,7 @@ app.controller('PracticeCtrl', function($scope, $window){
         let fCall = fName.join('').trimRight();
         console.log(fCall);
         return fCall;
-    }
+    };
 
     let checkFunctionSpell = (string) => {
         let f = string.slice(0, 8);
@@ -40,23 +40,28 @@ app.controller('PracticeCtrl', function($scope, $window){
         } else {
             console.log('You have spelled function incorrectly');
         }
-    }
+    };
 
     //     f.indexOf('(');
     //     f.indexOf('{');
     //     f.indexOf('}');
 
     let getReturn = (string) => {
+
       let stringArray = string.split('');
-      let firstCurly = stringArray.indexOf('{');
-      let lastCurly = stringArray.indexOf('}');
-      let returnStatementWithReturns = stringArray.slice(firstCurly + 1, lastCurly);
-      returnStatementWithReturns = returnStatementWithReturns.join('');
-      let returnStringIndex = returnStatementWithReturns.indexOf('return');
-      let semiStringIndex = returnStatementWithReturns.indexOf(';');
-      let returnStatement = returnStatementWithReturns.slice(returnStringIndex, semiStringIndex + 1);
-      return returnStatement;
-    }
+
+      let withReturns = stringArray.slice(stringArray.indexOf('{') + 1, stringArray.indexOf('}'));
+      withReturns.splice(withReturns.indexOf("\n"), 1);
+    
+      if (withReturns[(withReturns.indexOf("\n"))-1] !== ";") {
+        console.log("TOOL TIP: Don't forget your ';' at the end of your return statement!");
+      } else {
+        withReturns = withReturns.join('');
+        let returnStatement = withReturns.slice(withReturns.indexOf('return'), withReturns.indexOf(';') + 1);
+        return returnStatement;
+      }
+
+    };
 
 
 });
