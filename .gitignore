@@ -1,2 +1,2 @@
-DS_Store
-lib/node_modules
+.DS_Store
+public/lib/node_modules
