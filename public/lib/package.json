@@ -13,5 +13,12 @@
     "jshint-stylish": "*",
     "matchdep": "*",
     "material-ui": "^0.19.0"
-  }
+  },
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
