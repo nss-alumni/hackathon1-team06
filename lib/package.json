@@ -9,7 +9,7 @@
     "grunt-contrib-jshint": "*",
     "grunt-contrib-nodeunit": "*",
     "grunt-contrib-watch": "*",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "jshint-stylish": "*",
     "matchdep": "*",
     "material-ui": "^0.19.0"
