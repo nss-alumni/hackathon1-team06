@@ -2,7 +2,7 @@
   "name": "eclipse",
   "version": "0.1.0",
   "devDependencies": {
-    "angular": "^1.6.5",
+    "angular": "^1.8.0",
     "angular-material": "^1.1.4",
     "angular-route": "^1.6.5",
     "grunt": "^0.4.0",
