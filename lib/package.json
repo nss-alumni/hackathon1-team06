@@ -5,7 +5,7 @@
     "angular": "^1.6.5",
     "angular-material": "^1.1.4",
     "angular-route": "^1.6.5",
-    "grunt": "^0.4.0",
+    "grunt": "^1.5.3",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-nodeunit": "*",
     "grunt-contrib-watch": "*",
